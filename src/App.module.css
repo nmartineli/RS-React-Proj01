@@ -1,0 +1,22 @@
+.wrapper {
+	max-width: 70rem;
+	margin: 2rem auto;
+	padding: 0 1rem;
+
+	display: grid;
+	/* indica que a primeira coluna tem largura fixa de 256px e que a segunda tem a largura variável de acordo com o espaço disponível */
+	grid-template-columns: 256px 1fr;
+	gap: 2rem;
+	align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+	html {
+		font-size: 87.5%;
+	}
+
+	.wrapper {
+		/* indica que só tem uma coluna */
+		grid-template-columns: 1fr;
+	}
+}
